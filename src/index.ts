@@ -1,7 +1,7 @@
 export type DeviceInfoInput = {
-  userAgent?: string | null
-  platform?: string | null
-  appVersion?: string | null
+  userAgent?: string | null | undefined
+  platform?: string | null | undefined
+  appVersion?: string | null | undefined
 }
 
 export type PushSubscriptionKeys = {
@@ -34,11 +34,11 @@ export type AgentScheduleWeekly = Record<AgentScheduleDay, AgentScheduleTimeRang
 export type AgentScheduleException = {
   date: string
   closed: boolean
-  hours?: AgentScheduleTimeRange[] | null
+  hours?: AgentScheduleTimeRange[] | undefined
 }
 
 export type AgentScheduleInput = {
   timezone: string
   weekly: AgentScheduleWeekly
-  exceptions?: AgentScheduleException[] | null
+  exceptions?: AgentScheduleException[] | undefined
 }
