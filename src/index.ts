@@ -42,3 +42,26 @@ export type AgentScheduleInput = {
   weekly: AgentScheduleWeekly
   exceptions?: AgentScheduleException[] | undefined
 }
+
+export type TransferredLead = {
+  callId: string
+  leadId: string
+  transferBridgedAt: number
+  phoneNumber: string
+  customerFullName?: string | null | undefined
+  customerAddress?: string | null | undefined
+  customerCity?: string | null | undefined
+  customerState?: string | null | undefined
+  customerZip?: string | null | undefined
+  customerEmail?: string | null | undefined
+  comments?: string | null | undefined
+  originalRecordingCallId?: string | null | undefined
+  transferRecordingCallId?: string | null | undefined
+}
+
+export type TransferredLeadRecording = {
+  callId: string
+  label: "Pre-Transfer Recording" | "Sales Call Recording"
+  recordingType: "original" | "transfer"
+  storageId: string
+}
