@@ -43,6 +43,24 @@ export type AgentScheduleInput = {
   exceptions?: AgentScheduleException[] | undefined
 }
 
+export type AssessmentItem = {
+  key: string
+  met: boolean
+  rationale: string
+}
+
+export type AssessmentObservation = {
+  key: string
+  rationale: string
+}
+
+export type AssessmentDetails = {
+  qualifiers?: AssessmentItem[]
+  disqualifiers?: AssessmentItem[]
+  intentSignals?: AssessmentItem[]
+  observations?: AssessmentObservation[]
+}
+
 export type TransferredLead = {
   callId: string
   leadId: string
@@ -55,6 +73,7 @@ export type TransferredLead = {
   customerZip?: string | null | undefined
   customerEmail?: string | null | undefined
   comments?: string | null | undefined
+  assessmentDetails?: AssessmentDetails | null | undefined
   originalRecordingCallId?: string | null | undefined
   transferRecordingCallId?: string | null | undefined
 }
