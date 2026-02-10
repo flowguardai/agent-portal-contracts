@@ -76,6 +76,7 @@ export type TransferredLead = {
   assessmentDetails?: AssessmentDetails | null | undefined
   originalRecordingCallId?: string | null | undefined
   transferRecordingCallId?: string | null | undefined
+  isTurboAnswered?: boolean | null | undefined
 }
 
 export type TransferredLeadRecording = {
