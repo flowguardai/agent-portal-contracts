@@ -64,6 +64,8 @@ export type AssessmentDetails = {
 export type TransferredLead = {
   callId: string
   leadId: string
+  signalWireCustomerCallId: string | null
+  sold: boolean
   transferBridgedAt: number
   phoneNumber: string
   customerFullName?: string | null | undefined
