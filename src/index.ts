@@ -65,9 +65,11 @@ export type TransferredLead = {
   callId: string
   leadId: string
   signalWireCustomerCallId: string | null
-  sold: boolean
+  sold: boolean | null
+  refundState: "kept" | "limbo"
+  isLimbo: boolean
   transferBridgedAt: number
-  phoneNumber: string
+  phoneNumber: string | null
   customerFullName?: string | null | undefined
   customerAddress?: string | null | undefined
   customerCity?: string | null | undefined
